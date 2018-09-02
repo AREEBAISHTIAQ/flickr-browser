@@ -1,9 +1,9 @@
 module ApplicationHelper
     def title
         if @user.present?
-            "#{@user.username} :: Flickr browser"
+            "#{@user.username} :: Flickr"
         else
-            'Flickr browser'
+            'Flickr'
         end
     end
 
@@ -11,8 +11,8 @@ module ApplicationHelper
         if @user.present?
             title = "#{@user.username}"
         else
-            title = 'flickr browser'
+            title = 'flickr'
         end
-        link_tp title, :root, class: 'navbar-brand'
+        link_to title, :root, class: 'navbar-brand'
     end
 end
